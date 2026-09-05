@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import SlowTrailsIndia from "./SlowTrailsIndia.jsx";
 import BundelkhandPage from "./itineraries/BundelkhandPage.jsx";
 import ItineraryPage from "./itineraries/bundelkhand/ItineraryPage.jsx";
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/community-charter" element={<CommunityCharterPage />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
